@@ -23,8 +23,14 @@ interface gigabitethernet 0/0
 ip address 172.16.8.1 255.255.252.0
 description CONECTADA A INTERFACE G0/1 DO SW-SP
 interface serial 0/0/0
-ip address 200.200.100.2 255.255.255.252
-description CONECTADA A INTERFACE RT-RJ
+ip address 200.200.100.1 255.255.255.252
+description CONECTADA A INTERFACE s0/0/0 DO RT-RJ
 no shutdown
+exit
+interface serial 0/0/1
+ip address 200.200.100.5 255.255.255.252
+description CONECTADA A INTERFACE s0/0/0 DO RT-MG
+no shutdown
+exit
 end
 wr
