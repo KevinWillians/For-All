@@ -24,8 +24,14 @@ ip address 172.16.0.1 255.255.248.0
 description CONECTADA A INTERFACE G0/1 DO SW-RJ
 no shutdown
 interface serial 0/0/0
-ip address 200.200.100.1 255.255.255.252
-description CONECTADA A INTERFACE RT-SP
+ip address 200.200.100.2 255.255.255.252
+description CONECTADA A INTERFACE s0/0/0 DO RT-SP
 no shutdown
+exit
+interface serial 0/0/1
+ip addres 200.200.100.9 255.255.255.252
+description CONECTADA A INTERFACE s0/0/1 DO RT-MG
+no shutdown
+exit
 end
 wr
